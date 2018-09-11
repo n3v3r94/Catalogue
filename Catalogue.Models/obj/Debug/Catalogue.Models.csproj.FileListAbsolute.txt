@@ -1,0 +1,15 @@
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Catalogue.Models.dll.config
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Catalogue.Models.dll
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Catalogue.Models.pdb
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\EntityFramework.dll
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\EntityFramework.xml
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\obj\Debug\Catalogue.Models.csproj.CoreCompileInputs.cache
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\obj\Debug\Catalogue.Models.csproj.CopyComplete
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\obj\Debug\Catalogue.Models.dll
+C:\Users\n3v3r94\source\repos\Catalogue.Web\Catalogue.Models\obj\Debug\Catalogue.Models.pdb

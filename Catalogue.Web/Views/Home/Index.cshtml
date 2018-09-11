@@ -1,0 +1,13 @@
+﻿
+
+@model  IEnumerable<Catalogue.Models.ViewModels.ProductView>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@foreach (var item in @Model)
+{
+    <p>@item.Title</p>
+}
