@@ -1,9 +1,7 @@
-using System;
-using System.Linq;
-using Catalogue.Models;
 using Catalogue.Service;
+using Catalogue.Service.Implements;
 using Catalogue.Web.Controllers;
-using Microsoft.AspNet.Identity;
+using System;
 using Unity;
 using Unity.Injection;
 
@@ -53,6 +51,7 @@ namespace Catalogue.Web
 
 
             container.RegisterType<ICatalogueService, CatalogueService>();
+            container.RegisterType<IAdministratorService, AdministratorService>();
            
 
             container.RegisterType<AccountController>(new InjectionConstructor());

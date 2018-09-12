@@ -22,7 +22,18 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                   
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li> @Html.ActionLink("Product", "GetAllProduct", "Administrator") </li>
+                        <li> @Html.ActionLink("Category", "GetAllCategory", "Administrator") </li>
+                    }
+                    else
+                    {
+                        <li> @Html.ActionLink("Product", "GetAllProduct", "Catalogue") </li>
+                    }
+
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -32,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; Hristo Ivanovski</p>
         </footer>
     </div>
 

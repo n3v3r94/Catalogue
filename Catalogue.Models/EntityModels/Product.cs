@@ -27,6 +27,8 @@ namespace Catalogue.Models.EntityModels
         [StringLength(100, MinimumLength = 3)]
         public virtual string Category { get; set; }
 
+        public string Test { get; set; }
+
         public virtual ICollection<Category> Categories { get; set; }
     }
 }

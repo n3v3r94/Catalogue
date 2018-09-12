@@ -6,6 +6,7 @@ namespace Catalogue.Web.Controllers
     using Catalogue.Service;
     using Catalogue.Web.Models;
     using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using System.Linq;
@@ -18,13 +19,20 @@ namespace Catalogue.Web.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private UserManager _userManager;
-       
+       private RoleManager<IdentityRole> roleManager;
+        
+
         public AccountController()
         {
         }
 
-        public AccountController(UserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(UserManager userManager, 
+            ApplicationSignInManager signInManager,
+            RoleManager<IdentityRole> roleManager
+
+            )
         {
+            this.roleManager = roleManager;
             UserManager = userManager;
             SignInManager = signInManager;
         }
@@ -58,6 +66,7 @@ namespace Catalogue.Web.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -73,6 +82,8 @@ namespace Catalogue.Web.Controllers
             {
                 return View(model);
             }
+
+           
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
@@ -152,8 +163,15 @@ namespace Catalogue.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                
+
                 var user = new User { UserName = model.Email, Email = model.Email };
+
+
                 var result = await UserManager.CreateAsync(user, model.Password);
+
+               // await  UserManager.AddToRoleAsync(user.Id, "Admin");
+
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
