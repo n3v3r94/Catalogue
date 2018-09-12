@@ -3,6 +3,7 @@ namespace Catalogue.Web.Controllers
 {
     using Catalogue.Models.ViewModels;
     using Catalogue.Service;
+    using System.Linq;
     using System.Web.Mvc;
 
     [Authorize(Roles = "Admin")]
@@ -27,7 +28,7 @@ namespace Catalogue.Web.Controllers
         public ActionResult GetAllCategories()
         {
 
-            var categories = administratorSvc.GetAllCategories();
+            var categories = administratorSvc.GetAllCategories().ToList();
 
             return View(categories);
         }
@@ -35,7 +36,22 @@ namespace Catalogue.Web.Controllers
       [HttpGet]
        public ActionResult Create()
         {
-            return  View(new ProductView());
+
+           
+            var product = new ProductView();
+            var categories = administratorSvc.GetAllCategories().ToList();
+            foreach (var item in categories)
+            {
+                SelectListItem tempCategory = new SelectListItem();
+
+                tempCategory.Text = item.Name;
+                tempCategory.Value = item.Name;
+                product.Categories.Add(tempCategory);
+
+            }
+
+
+            return  View(product);
         }
 
 

@@ -1,7 +1,13 @@
-﻿
+﻿@model IEnumerable<Catalogue.Models.EntityModels.Category>
+
+
 @{
     ViewBag.Title = "GetAllCategories";
 }
 
 <h2>GetAllCategories</h2>
 
+@foreach (var item in Model)
+{
+    <p>@item.Name</p>
+}

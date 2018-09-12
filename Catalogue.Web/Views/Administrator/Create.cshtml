@@ -1,4 +1,5 @@
 ﻿@model  Catalogue.Models.ViewModels.ProductView
+
 @{
     ViewBag.Title = "Create";
 }
@@ -39,7 +40,17 @@
             @Html.TextBoxFor(c => c.Category, new { @class = "form-control" })
         </div>
     </div>
+   
+    <div class="form-group">
+       
+        <div class="col-md-10">
+            @Html.DropDownListFor(f => f.Categories, Model.Categories, "Choose Category")
+           
+        </div>
+    </div>
 
-    <input type="submit" class="btn btn-default" value="Create" />
-
+    <div class="form-group"><div class="col-md-10"><input type="submit" class="btn btn-default" value="create"/></div></div>
 }
+
+
+

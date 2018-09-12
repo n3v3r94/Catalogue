@@ -1,7 +1,9 @@
 ﻿
 namespace Catalogue.Models.ViewModels
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
 
     public class ProductView
     {
@@ -21,5 +23,9 @@ namespace Catalogue.Models.ViewModels
         [Required]
         [StringLength(100, MinimumLength = 3)]
         public virtual string Category { get; set; }
+
+        public List<SelectListItem> Categories { get; set; } = new List<SelectListItem>();
+
+            
     }
 }

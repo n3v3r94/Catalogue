@@ -29,3 +29,16 @@ C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\obj\Debug\Catalogue.Models.c
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\obj\Debug\Catalogue.Models.csproj.CopyComplete
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\obj\Debug\Catalogue.Models.dll
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\obj\Debug\Catalogue.Models.pdb
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.Helpers.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.Mvc.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.Razor.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.WebPages.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.Helpers.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.Mvc.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.Razor.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.WebPages.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Models\bin\Debug\System.Web.WebPages.Razor.xml

@@ -31,3 +31,14 @@ C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\obj\Debug\Catalogue.Service
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\obj\Debug\Catalogue.Service.csproj.CopyComplete
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\obj\Debug\Catalogue.Service.dll
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\obj\Debug\Catalogue.Service.pdb
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.Mvc.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.WebPages.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.Razor.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.Mvc.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.WebPages.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.Razor.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Service\bin\Debug\System.Web.WebPages.Deployment.xml

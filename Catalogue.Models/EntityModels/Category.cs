@@ -17,7 +17,7 @@ namespace Catalogue.Models.EntityModels
 
         [Index]
         [Column(TypeName = "VARCHAR")]
-        [StringLength(3, MinimumLength =150)]
+        [StringLength(150, MinimumLength =3)]
         public  string Name { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }

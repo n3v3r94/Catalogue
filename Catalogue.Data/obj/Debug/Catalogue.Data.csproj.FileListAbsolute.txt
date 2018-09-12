@@ -41,3 +41,15 @@ C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\obj\Debug\Catalogue.Data.cspro
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\obj\Debug\Catalogue.Data.dll
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\obj\Debug\Catalogue.Data.pdb
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\obj\Debug\Catalogue.Data.Migrations.test.resources
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\obj\Debug\Catalogue.Data.Migrations.EditLengthCategoryName.resources
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.Mvc.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.WebPages.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.Razor.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.Mvc.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.WebPages.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.Razor.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Data\bin\Debug\System.Web.WebPages.Deployment.xml
