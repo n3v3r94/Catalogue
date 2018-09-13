@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using System.Web.Mvc;
     using Catalogue.Data;
     using Catalogue.Models.EntityModels;
     using Catalogue.Models.ViewModels;
@@ -19,14 +20,7 @@
 
         public IEnumerable<ProductWithCategories> GetAllProduct()
         {
-            //var allProducts = this.db.Products.Select(p => new ProductView
-            //{
-            //Title = p.Title,
-            //Content = p.Content,
-            //Price = p.Price,
-            //Category = p.Category,
-            //});
-
+     
             var res = this.db.Products.Include("Categories");
 
             List<ProductWithCategories> prodWithCategories = new List<ProductWithCategories>();
@@ -76,6 +70,27 @@
             }
 
             return product;
+        }
+
+        public   DropDownCategoriesView GetAllCategories()
+        {
+            var categories = db.Categories.ToList();
+
+            DropDownCategoriesView dropDown = new DropDownCategoriesView();
+
+
+            foreach (var item in categories)
+            {
+            
+                dropDown.Categories.Add(new SelectListItem
+                {
+                    Text = item.Name,
+                    Value = item.Name
+                });
+               
+            }
+
+            return dropDown;
         }
     }
 }

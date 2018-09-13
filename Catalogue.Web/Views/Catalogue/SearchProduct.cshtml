@@ -1,0 +1,20 @@
+﻿
+@model Catalogue.Models.ViewModels.DropDownCategoriesView
+
+@{
+                /**/
+
+                ViewBag.Title = "SearchProduct";
+}
+
+<h2>SearchProduct</h2>
+
+
+@using (Html.BeginForm("SearchByCategories", "Catalogue", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.DropDownListFor(c => c.Categories, Model.Categories);
+
+    <input type="submit" value="Search" />
+   
+}

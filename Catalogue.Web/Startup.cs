@@ -15,35 +15,35 @@ namespace Catalogue.Web
             ConfigureAuth(app);
            // CreateAdmin();
         }
-
+        //!!!!
         //private void CreateAdmin()
         //{
-            //var db = new CatalogueDbContext();
-            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
-            //var UserManager = new UserManager<User>(new UserStore<User>(db));
+        //    var db = new CatalogueDbContext();
+        //    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
+        //    var UserManager = new UserManager<User>(new UserStore<User>(db));
 
-            //if (roleManager.RoleExists("Admin"))
-            //{
-                //var role = new IdentityRole();
-                //role.Name = "Admin";
-                //roleManager.Create(role);
-              
-
-                //var admin = new User();
-                //admin.Email = "admin5";
-                //admin.UserName = "administrator";
-                //string password = "123456";
-
-              //var ckeck =   UserManager.Create(admin, password);
-
-                //if (ckeck.Succeeded)
-                //{
-                    //UserManager.AddToRole(admin.Id, "Admin");
-                //}
-              
+        //    if (roleManager.RoleExists("Admin"))
+        //    {
+        //       // var role = new IdentityRole();
+        //       // role.Name = "Admin";
+        //       // roleManager.Create(role);
 
 
-            //}
+        //        var admin = new User();
+        //        admin.Email = "admin2@abv.bg";
+        //        admin.UserName = "admin2";
+        //        string password = "123456";
+
+        //        var ckeck = UserManager.Create(admin, password);
+
+        //        if (ckeck.Succeeded)
+        //        {
+        //            UserManager.AddToRole(admin.Id, "Admin");
+        //        }
+
+
+
+        //    }
 
         //}
     }

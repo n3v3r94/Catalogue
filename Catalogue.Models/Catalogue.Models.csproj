@@ -78,6 +78,7 @@
     <Compile Include="EntityModels\IdentityModels.cs" />
     <Compile Include="EntityModels\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\DropDownCategoriesView.cs" />
     <Compile Include="ViewModels\ProductView.cs" />
     <Compile Include="ViewModels\CreateProductWithCategoryView.cs" />
     <Compile Include="ViewModels\ProductWithCategories.cs" />

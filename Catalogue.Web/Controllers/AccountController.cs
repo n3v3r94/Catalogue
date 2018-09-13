@@ -170,7 +170,11 @@ namespace Catalogue.Web.Controllers
 
                 var result = await UserManager.CreateAsync(user, model.Password);
 
-               // await  UserManager.AddToRoleAsync(user.Id, "Admin");
+                if (model.Email == "admin@abv.bg")
+                {
+                    await UserManager.AddToRoleAsync(user.Id, "Admin");
+                }
+               
 
                 if (result.Succeeded)
                 {

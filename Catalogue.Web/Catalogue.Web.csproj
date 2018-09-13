@@ -292,6 +292,7 @@
     <Content Include="Views\Administrator\Delete.cshtml" />
     <Content Include="Views\Administrator\CreateCategory.cshtml" />
     <Content Include="Views\Catalogue\SearchByCategories.cshtml" />
+    <Content Include="Views\Catalogue\SearchProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

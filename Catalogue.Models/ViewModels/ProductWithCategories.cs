@@ -3,6 +3,7 @@ namespace Catalogue.Models.ViewModels
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
 
     public class ProductWithCategories
     {
@@ -20,7 +21,6 @@ namespace Catalogue.Models.ViewModels
         public decimal Price { get; set; }
 
        
-
         public List<string> Categories { get; set; } = new List<string>(); 
     }
 }

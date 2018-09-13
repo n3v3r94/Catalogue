@@ -1,6 +1,7 @@
 ﻿
 namespace Catalogue.Web.Controllers
 {
+    using Catalogue.Models.ViewModels;
     using Catalogue.Service;
     using System.Linq;
     using System.Web.Mvc;
@@ -23,9 +24,23 @@ namespace Catalogue.Web.Controllers
             return View(allProduct);
        }
 
-        public ActionResult SearchByCategories (string search)
-        {
 
+        [HttpGet]
+        public ActionResult SearchProduct()
+        {
+            var categories = catalogueSvc.GetAllCategories();
+
+            return View(categories);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SearchByCategories (string Categories)
+        {
+            
+           
+            var categories = catalogueSvc.SerarByCategories(Categories);
+            return View(categories);
         }
     }
 }

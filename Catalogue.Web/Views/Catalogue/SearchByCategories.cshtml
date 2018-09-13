@@ -1,6 +1,6 @@
 ﻿@model  IEnumerable<Catalogue.Models.ViewModels.ProductView>
 @{
-    ViewBag.Title = "SearchByCategories";
+   ViewBag.Title = "SearchByCategories";
 }
 
 <h2>SearchByCategories</h2>
@@ -24,10 +24,12 @@
                 <th>@pruduct.Price</th>
                 <th>@pruduct.Category</th>
 
-              
-               
+
+
             </tr>
         }
     </tbody>
 
 </table>
+
+<span class="btn btn-default"> @Html.ActionLink("Home", "Index", "Home")</span>
