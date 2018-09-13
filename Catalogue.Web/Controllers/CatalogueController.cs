@@ -2,6 +2,7 @@
 namespace Catalogue.Web.Controllers
 {
     using Catalogue.Service;
+    using System.Linq;
     using System.Web.Mvc;
 
     public class CatalogueController : Controller
@@ -15,9 +16,16 @@ namespace Catalogue.Web.Controllers
 
         public ActionResult GetAllProduct()
         {
-           var allProduct = this.catalogueSvc.GetAllProduct();
+            var allProduct = this.catalogueSvc.GetAllProduct().ToList();
+
+            var lastThreeProduct = allProduct.Skip(allProduct.Count - 3);
 
             return View(allProduct);
        }
+
+        public ActionResult SearchByCategories (string search)
+        {
+
+        }
     }
 }

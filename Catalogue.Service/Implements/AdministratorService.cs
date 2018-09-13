@@ -17,9 +17,9 @@ namespace Catalogue.Service.Implements
         }
 
 
-        public IEnumerable<Product>GetAllProduct()
+        public IEnumerable<Product> GetAllProduct()
         {
-            var  allProduct = this.db.Products;
+            var allProduct = this.db.Products;
 
             return allProduct.ToList();
         }
@@ -28,11 +28,46 @@ namespace Catalogue.Service.Implements
         {
             var allCategory = this.db.Categories;
 
+
             return allCategory;
         }
 
+        public ProductView FindProduct(int id)
+        {
 
-        public void CreateProduct(ProductView prod)
+            var prodDb = this.db.Products.FirstOrDefault(p => p.Id == id);
+
+            var prodVm = new ProductView
+            {
+                Title = prodDb.Title,
+                Content = prodDb.Content,
+                Price = prodDb.Price,
+                Category = prodDb.Category
+            };
+
+            return prodVm;
+        }
+
+
+        public void EditProduct(ProductView product, int id)
+        {
+
+            var prodDb = this.db.Products.FirstOrDefault(p => p.Id == id);
+
+            if (prodDb != null)
+            {
+                prodDb.Price = product.Price;
+                prodDb.Title = product.Title;
+                prodDb.Category = product.Category;
+                prodDb.Content = product.Content;
+            }
+
+            this.db.Products.Add(prodDb);
+            this.db.SaveChanges();
+
+        }
+
+        public void CreateProduct(CreateProductWithCategoryView prod)
         {
             Product tempProduct = new Product
             {
@@ -43,10 +78,34 @@ namespace Catalogue.Service.Implements
             };
 
             this.db.Products.Add(tempProduct);
+
+            foreach (var item in prod.SelectedCategories)
+            {
+               var currentCategory = this.db.Categories.FirstOrDefault(c => c.Name == item);
+
+                tempProduct.Categories.Add(currentCategory);
+
+            }
+            
             db.SaveChanges();
 
         }
 
-      
+        public void DeleteProduct(int id, string strConfirm)
+        {
+            var product = this.db.Products.FirstOrDefault(p => p.Id == id);
+
+             
+
+            this.db.Products.Remove(product);
+            this.db.SaveChanges();
+
+        }
+
+        public void CreateCategory(Category category)
+        {
+            this.db.Categories.Add(category);
+            db.SaveChanges();
+        }
     }
 }

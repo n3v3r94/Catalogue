@@ -1,7 +1,47 @@
 ﻿
+@using Catalogue.Models.ViewModels
+
+@model  IEnumerable<ProductWithCategories>
+
 @{
     ViewBag.Title = "Product";
 }
 
 <h2>Product</h2>
 
+<table class="table table-bordered table-hover">
+
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> Content </th>
+            <th> Price </th>
+            <th> Category </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pruduct in Model)
+        {
+            <tr>
+                <th>@pruduct.Title</th>
+                <th>@pruduct.Content</th>
+                <th>@pruduct.Price</th>
+                
+                <th>
+                    @foreach (var category in pruduct.Categories)
+                    {
+                        <ul>
+                            <li>
+                                @category
+                            </li>
+                        </ul>
+                    }
+                    {
+
+                    }
+                </th>
+            </tr>
+        }
+    </tbody>
+
+</table>

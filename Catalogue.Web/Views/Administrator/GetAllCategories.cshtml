@@ -7,6 +7,9 @@
 
 <h2>GetAllCategories</h2>
 
+<a class="btn btn-default" @Html.ActionLink("Create", "CreateCategory", "Administrator") </a>
+
+
 @foreach (var item in Model)
 {
     <p>@item.Name</p>

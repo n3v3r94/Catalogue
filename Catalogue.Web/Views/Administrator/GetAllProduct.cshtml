@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Catalogue.Models.EntityModels.Product>
-
+﻿@model  IEnumerable< Catalogue.Models.EntityModels.Product>
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Admin Product";
 }
@@ -17,17 +17,25 @@
             <th> Content </th>
             <th> Price </th>
             <th> Category </th>
+            <th>Administrator</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var page in Model)
         {
-            <tr>
-                <th>@item.Title</th>
-                <th>@item.Content</th>
-                <th>@item.Price</th>
-                <th>@item.Category</th>
-            </tr>
+           
+                <tr>
+                    <th>@page.Title</th>
+                    <th>@page.Content</th>
+                    <th>@page.Price</th>
+                    <th>@page.Category</th>
+                    <th>
+                        <span>@Html.ActionLink("Edit", "Edit", new { page.Id })</span> <br />
+                        <span> @Html.ActionLink("Delete", "Delete", new { page.Id })</span>
+                    </th>
+                </tr>
+            
+
         }
     </tbody>
 

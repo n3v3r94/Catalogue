@@ -79,6 +79,8 @@
     <Compile Include="EntityModels\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ProductView.cs" />
+    <Compile Include="ViewModels\CreateProductWithCategoryView.cs" />
+    <Compile Include="ViewModels\ProductWithCategories.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

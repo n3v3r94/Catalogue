@@ -1,13 +1,41 @@
 ﻿
 
-@model  IEnumerable<Catalogue.Models.ViewModels.ProductView>
+@model  IEnumerable<Catalogue.Models.ViewModels.ProductWithCategories>
 
 @{
     ViewBag.Title = "Home Page";
 }
+<table class="table table-bordered table-hover">
 
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> Content </th>
+            <th> Price </th>
+            <th> Category </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <th>@product.Title</th>
+                <th>@product.Content</th>
+                <th>@product.Price</th>
+                <th>
+                    @foreach (var category in product.Categories)
+                    {
+                        <ul>
+                            <li>
+                                @category
+                            </li>
+                        </ul>
+                    }
+                </th>
+                
+            </tr>
+        }
+    </tbody>
 
-@foreach (var item in @Model)
-{
-    <p>@item.Title</p>
-}
+</table>
+

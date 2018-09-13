@@ -1,11 +1,12 @@
 ﻿
 namespace Catalogue.Service
 {
-    using System.Collections.Generic;
-    using Catalogue.Models.EntityModels;
     using Catalogue.Models.ViewModels;
+    using System.Collections.Generic;
     public interface ICatalogueService
     {
-        IEnumerable<ProductView> GetAllProduct();
+        IEnumerable<ProductWithCategories> GetAllProduct();
+        IEnumerable<ProductView> SerarByCategories(string category);
+      
     }
 }

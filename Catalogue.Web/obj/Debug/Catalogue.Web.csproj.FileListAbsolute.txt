@@ -268,3 +268,7 @@ C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\obj\Debug\Catalogue.Web.csproj.
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\obj\Debug\Catalogue.Web.csproj.CopyComplete
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\obj\Debug\Catalogue.Web.dll
 C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\obj\Debug\Catalogue.Web.pdb
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\bin\PagedList.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\bin\PagedList.Mvc.dll
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\bin\PagedList.xml
+C:\Users\Klevret-User\Desktop\cat2\Catalogue.Web\bin\PagedList.Mvc.xml

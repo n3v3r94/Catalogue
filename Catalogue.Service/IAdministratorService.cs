@@ -11,6 +11,14 @@ namespace Catalogue.Service
 
         IEnumerable<Category> GetAllCategories();
 
-        void CreateProduct(ProductView prod);
+        void CreateProduct(CreateProductWithCategoryView prod);
+
+        ProductView FindProduct(int id);
+
+        void EditProduct(ProductView product, int id);
+
+        void DeleteProduct(int id, string strConfirm);
+
+        void CreateCategory(Category category);
     }
 }

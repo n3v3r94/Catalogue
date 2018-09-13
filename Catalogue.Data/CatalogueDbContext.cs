@@ -18,7 +18,7 @@ namespace Catalogue.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
 
-     
+        
        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace Catalogue.Data
                    }));
 
             modelBuilder.Entity<Product>().Property(p => p.Price).HasPrecision(12, 10);
-
+           
         }
         public static CatalogueDbContext Create()
         {

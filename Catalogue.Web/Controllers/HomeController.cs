@@ -18,8 +18,10 @@ namespace Catalogue.Web.Controllers
 
         public ActionResult Index()
         {
-            var allProdcut = this.catalogueSvc.GetAllProduct();
-            return View(allProdcut);
+            var allProduct = this.catalogueSvc.GetAllProduct().ToList();
+
+            var lastThreeProduct = allProduct.Skip(allProduct.Count - 3);
+            return View(lastThreeProduct);
         }
     }
 }
