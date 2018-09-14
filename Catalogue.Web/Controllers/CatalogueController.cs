@@ -17,21 +17,21 @@ namespace Catalogue.Web.Controllers
 
         public ActionResult GetAllProduct()
         {
-            var allProduct = this.catalogueSvc.GetAllProduct().ToList();
+            var allProduct = catalogueSvc.GetAllProduct().ToList();
 
-            var lastThreeProduct = allProduct.Skip(allProduct.Count - 3);
+            
 
             return View(allProduct);
        }
 
 
-        [HttpGet]
-        public ActionResult SearchProduct()
-        {
-            var categories = catalogueSvc.GetAllCategories();
-
-            return View(categories);
-        }
+        //[HttpGet]
+        //public ActionResult SearchProduct()
+        //{
+        //    var categories = catalogueSvc.GetAllCategories();
+        //
+        //    return View(categories);
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -39,8 +39,9 @@ namespace Catalogue.Web.Controllers
         {
             
            
-            var categories = catalogueSvc.SerarByCategories(Categories);
-            return View(categories);
+            var productViews = catalogueSvc.SerarByCategories(Categories);
+
+            return View(productViews);
         }
     }
 }

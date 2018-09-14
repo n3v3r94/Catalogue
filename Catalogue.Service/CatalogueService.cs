@@ -34,10 +34,18 @@
                 foreach (var categories in product.Categories)
                 {
                     tempProduct.Categories.Add(categories.Name);
+
+                    tempProduct.SelectCategories.Add(new SelectListItem
+                    {
+                        Text = categories.Name,
+                        Value = categories.Name
+                           
+                    });
                 }
 
                 prodWithCategories.Add(tempProduct);
             }
+
 
             return prodWithCategories;
         }
@@ -57,7 +65,7 @@
                         ProductView tempProduct = new ProductView
                         {
                             Title = item.Title,
-                            Category = item.Category,
+                            Category = search,
                             Price = item.Price,
                             Content = item.Content,
 

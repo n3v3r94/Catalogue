@@ -136,11 +136,12 @@ namespace Catalogue.Web.Controllers
 
             var status = administratorSvc.CreateCategory(category);
 
-            if (status != "success")
+            if (status == "the name must be unique")
             {
                 ModelState.AddModelError("", status);
                
             }
+           
 
 
             if (!ModelState.IsValid)
@@ -148,6 +149,7 @@ namespace Catalogue.Web.Controllers
                 return View(category);
 
             }
+        
             return RedirectToAction(nameof(GetAllCategories));
 
         }

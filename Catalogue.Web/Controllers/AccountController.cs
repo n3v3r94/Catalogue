@@ -19,7 +19,8 @@ namespace Catalogue.Web.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private UserManager _userManager;
-       private RoleManager<IdentityRole> roleManager;
+
+        private RoleManager<IdentityRole> roleManager;
         
 
         public AccountController()

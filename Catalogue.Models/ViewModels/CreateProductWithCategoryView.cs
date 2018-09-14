@@ -24,6 +24,7 @@ namespace Catalogue.Models.ViewModels
         public virtual string Category { get; set; }
 
         public List<SelectListItem> Categories { get; set; } = new List<SelectListItem>();
+
         public List<string> SelectedCategories { get; set; } = new List<string>();
     }
 }

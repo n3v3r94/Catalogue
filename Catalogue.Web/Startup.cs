@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Owin;
+using System.Threading.Tasks;
 
 [assembly: OwinStartupAttribute(typeof(Catalogue.Web.Startup))]
 namespace Catalogue.Web
@@ -13,16 +14,16 @@ namespace Catalogue.Web
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-           // CreateAdmin();
+            //CreateAdmin();
         }
-        //!!!!
-        //private void CreateAdmin()
+       
+        //private async Task CreateAdmin()
         //{
         //    var db = new CatalogueDbContext();
         //    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
         //    var UserManager = new UserManager<User>(new UserStore<User>(db));
 
-        //    if (roleManager.RoleExists("Admin"))
+        //    if (!roleManager.RoleExists("Admin"))
         //    {
         //       // var role = new IdentityRole();
         //       // role.Name = "Admin";
@@ -30,18 +31,16 @@ namespace Catalogue.Web
 
 
         //        var admin = new User();
-        //        admin.Email = "admin2@abv.bg";
-        //        admin.UserName = "admin2";
+        //        admin.Email = "admin5@abv.bg";
+        //        admin.UserName = "admin";
         //        string password = "123456";
 
-        //        var ckeck = UserManager.Create(admin, password);
+        //      var check =  await UserManager.CreateAsync(admin, password);
 
-        //        if (ckeck.Succeeded)
+        //        if (check.Succeeded)
         //        {
-        //            UserManager.AddToRole(admin.Id, "Admin");
+        //           await UserManager.AddToRoleAsync(admin.Id, "Admin");
         //        }
-
-
 
         //    }
 

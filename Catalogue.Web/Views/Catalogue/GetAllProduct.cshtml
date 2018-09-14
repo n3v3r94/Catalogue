@@ -10,9 +10,23 @@
 <h2>Product</h2>
 
 <div class="form-group">
- 
     <div class="col-md-10">
-        <span class=" btn btn-default"> @Html.ActionLink("Search", "SearchProduct", "Catalogue")</span>
+      @using (Html.BeginForm("SearchByCategories", "Catalogue", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <select id="Categories" name="Categories">
+                @foreach (var item in Model)
+                {
+                    foreach (var select in item.SelectCategories)
+                    {
+                        <option value="@select.Value"> @select.Text</option>
+                    }
+             }
+
+            </select>
+            <input type="submit" value="Search" />
+
+        }
     </div>
 </div>
 <hr />
