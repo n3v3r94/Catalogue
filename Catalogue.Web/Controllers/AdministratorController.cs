@@ -133,14 +133,23 @@ namespace Catalogue.Web.Controllers
         [HttpPost]
         public ActionResult CreateCategory(Category category)
         {
-            if (ModelState.IsValid)
-            {
-               this.administratorSvc.CreateCategory(category);
 
-              return  RedirectToAction(nameof(GetAllCategories));
+            var status = administratorSvc.CreateCategory(category);
+
+            if (status != "success")
+            {
+                ModelState.AddModelError("", status);
+               
             }
 
-            return View(category);
+
+            if (!ModelState.IsValid)
+            {
+                return View(category);
+
+            }
+            return RedirectToAction(nameof(GetAllCategories));
+
         }
 
 

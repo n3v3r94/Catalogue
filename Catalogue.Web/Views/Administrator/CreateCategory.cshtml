@@ -8,25 +8,28 @@
 
 @using (Html.BeginForm("CreateCategory", "Administrator", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
-   
 
 
 
 
-    @Html.ValidationSummary()
-    <div class="form-group">
-        @Html.LabelFor(n => n.Name, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(n => n.Name, new { @class = "form-control" })
-        </div>
+
+  
+<div class="form-group">
+    @Html.LabelFor(n => n.Name, new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.TextBoxFor(n => n.Name, new { @class = "form-control" })
     </div>
-    
+</div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                <span class="btn btn-danger"> @Html.ActionLink("Cancel", "GetAllCategories", "Administrator")</span>
 
-                    <input type="submit" class="btn btn-default" value="CreateCategory" />
-            </div>
-        </div>
-    }
+<div class="form-group">
+    <div class="col-md-10">
+        <span class="btn btn-danger"> @Html.ActionLink("Cancel", "GetAllCategories", "Administrator")</span>
+
+        <input type="submit" class="btn btn-default" value="CreateCategory" />
+    </div>
+</div>
+}

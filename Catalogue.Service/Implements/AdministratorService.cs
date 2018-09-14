@@ -102,10 +102,20 @@ namespace Catalogue.Service.Implements
 
         }
 
-        public void CreateCategory(Category category)
+        public string CreateCategory(Category category)
         {
-            this.db.Categories.Add(category);
-            db.SaveChanges();
+            try
+            {
+               db.Categories.Add(category);
+                db.SaveChanges();
+            }
+            catch (System.Exception)
+            {
+
+               return  "the name must be unique";
+            }
+
+            return "success";
         }
     }
 }

@@ -19,6 +19,6 @@ namespace Catalogue.Service
 
         void DeleteProduct(int id, string strConfirm);
 
-        void CreateCategory(Category category);
+        string CreateCategory(Category category);
     }
 }
